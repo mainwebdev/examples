@@ -1,0 +1,119 @@
+.category {
+  &-hero {
+    .head-nav {
+      min-width: 60%
+    }
+  }
+
+  .breadcrumbs-block {
+    background: transparent;
+    padding: rem(10) rem(0);
+
+    @media (max-width: 767px) {
+      padding: rem(10) rem(0);
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: rem(74);
+
+    &-head {
+      margin-bottom: rem(60);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &::after {
+        content: '';
+        flex-grow: 1;
+        margin-left: rem(60);
+        height: rem(3);
+        background-color: #D5E2F7;
+
+        @media (max-width: 767px) {
+          margin-left: rem(30);
+        }
+
+        @media (max-width: 480px) {
+          margin-left: 0;
+          margin-top: rem(10);
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: rem(30);
+      }
+    }
+
+    &-title {
+      font-family: Futura PT Cond;
+      font-size: rem(48);
+      line-height: normal;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #3D56CC;
+
+      @media (max-width: 767px) {
+        font-size: rem(24);
+      }
+    }
+
+    &-banner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #3D56CC;
+      padding: rem(31) rem(78) rem(40)rem(55);
+      margin-top: rem(60);
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: rem(30);
+      }
+
+      @media (max-width: 480px) {
+        padding: rem(30) rem(10);
+      }
+
+      &-title {
+        font-family: Futura PT;
+        font-size: rem(36);
+        line-height: normal;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+
+        .sup {
+          vertical-align: top;
+          font-size: rem(30);
+
+          @media (max-width: 767px) {
+            font-size: rem(14);
+          }
+        }
+        @media (max-width: 767px) {
+          margin-bottom: rem(20);
+          text-align: center;
+          font-size: rem(22);
+        }
+      }
+
+      &-btn {
+        padding: rem(20) rem(35) rem(19);
+
+        &:hover {
+          opacity: .85;
+        }
+      }
+    }
+  }
+}
