@@ -1,0 +1,92 @@
+.wrapper-pharmacies-page {
+	.content-cover {
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: rem(70);
+	}
+}
+
+.pharmacies-block {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 rem(-15);
+	}
+
+	&__col {
+		padding: 0 rem(15);
+		max-width: 25%;
+		width: 100%;
+		margin-bottom: rem(40);
+
+		@include desktop-sm() {
+			max-width: 50%;
+		}
+
+		@include phones-lg() {
+			max-width: 100%;
+			padding: 0 rem(30);
+			margin-bottom: rem(30);
+		}
+
+		&:last-child {
+			.pharmacies {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+.pharmacies {
+	padding: rem(15) rem(15) rem(80);
+	color: #2C4A9D;
+	display: block;
+
+	@include phones-lg() {
+		border-bottom: rem(2) solid #E7F1FB;
+		padding-bottom: rem(30);
+	}
+	
+	&__img-wrap {
+		margin-bottom: rem(32);
+		height: rem(205);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+
+		@include tablets() {
+			margin-bottom: rem(25);
+		}
+
+		@include phones-lg() {
+			height: auto;
+			padding: rem(15);
+		}
+
+	}
+
+	&__content {
+		text-align: center;
+
+		span {
+			font-size: rem(16);
+			line-height: rem(21);
+			color: #95B6E2;
+			display: block;
+			text-align: center;
+			margin-bottom: rem(10);
+
+			@include phones-lg() {
+				font-size: rem(14);
+				line-height: rem(18);
+			}
+		}
+
+	}
+
+	&:hover {
+		text-decoration: none;
+		background: linear-gradient(336.18deg, rgba(195, 219, 245, 0.37) 4.63%, rgba(255, 255, 255, 0) 97.28%), #FFFFFF;
+	}
+}

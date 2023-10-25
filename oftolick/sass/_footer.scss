@@ -1,0 +1,256 @@
+.footer {
+	background: #264088;
+	position: relative;
+	z-index: 2;
+
+	.container {
+		max-width: rem(1300);
+	}
+
+	p {
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: rem(15);
+		text-transform: uppercase;
+		color: #95B6E2;
+	}
+
+
+	&__top-info {
+		background: #2C4A9D;
+		padding: rem(23) 0;
+
+		.container {
+			max-width: 100%;
+		}
+		
+		p {
+			font-size: rem(22);
+			line-height: rem(28);
+			letter-spacing: -0.01em;
+			color: #D5DFEB;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: normal;
+
+			@include desktop-sm() {
+				font-size: rem(12);
+				line-height: rem(15);
+				
+			}
+
+			@include tablets() {
+				text-align: left;
+			}
+		}
+	}
+
+	.logo {
+		max-width: rem(170);
+		margin-bottom: rem(35);
+	}
+
+	.logo-sentiss {
+		max-width: rem(161);
+		margin-top: rem(-20);
+		margin-left: rem(-9);
+		margin-right: rem(-9);
+	}
+
+	nav {
+
+		@include tablets() {
+			margin-bottom: rem(15);
+		}
+
+		h6 {
+			font-family: "Futura PT";
+			color: #fff;
+			margin-bottom: rem(17);
+
+			@include desktop-sm() {
+				margin-bottom: rem(15);
+			}	
+		}
+
+		ul {
+			li {
+				font-weight: 500;
+				margin-bottom: rem(5);
+
+				a {
+				  font-size: rem(16);
+				  line-height: 155%;
+					color: #E2EFFF;
+				}
+
+				span {
+					color: #6E89D2;
+					font-size: rem(11);
+					line-height: rem(17.05);
+				}
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 rem(-15);
+		padding-top: rem(60);
+
+		@include desktop-sm() {
+			padding-top: rem(40);
+			margin-bottom: rem(45);
+		}
+		
+	}
+
+
+	&__col {
+		padding: 0 rem(15);
+		margin-bottom: rem(60);
+		width: 100%;
+		min-height: rem(1);
+
+		@include desktop-sm() {
+			max-width: 50% !important;
+		}
+
+		@include tablets() {
+			max-width: 100% !important;
+			margin-bottom: rem(15);
+		}
+
+		&:nth-child(1) {
+			max-width: 20%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&:nth-child(2) {
+			max-width: 27.5%;
+		}
+
+		&:nth-child(3) {
+			max-width: 28%;
+			
+		}
+
+		&:nth-child(4) {
+			width: auto;
+			margin-left: auto;
+
+			@include desktop-sm() {
+				margin: 0;
+			}
+		}
+		
+	}
+
+	&__bottom-content {
+
+		.footer__row {
+			border-top: rem(3) solid #2C4A9D;
+			padding-top: rem(44);
+		}
+
+		.footer__col {
+			&:nth-child(4) {
+				margin-left: 0;
+			}
+		}
+
+		p {
+			padding: rem(10) 0;
+
+			@include desktop-sm() {
+				padding: rem(10) 0;
+			}
+		}
+
+		a {
+			color: #EBEBEB;
+			font-size: rem(16);
+			line-height: 155%;
+			font-weight: 500;
+			display: block;
+		}
+
+	}
+
+	&__politics-link {
+		a {
+			font-size: rem(12);
+			line-height: rem(15);
+			padding: rem(5) 0;
+		}
+	}
+
+	.copyring {
+		font-size: rem(12);
+		line-height: rem(15);
+		color: #95B6E2;
+	}
+
+	
+}
+
+.scroll-up {
+	font-family: 'Futura PT', sans-serif;
+	outline: none;
+	background: none;
+	border: none;
+	background: #2C4A9D;
+	border-radius: rem(1000);
+	font-weight: bold;
+	font-size: rem(12);
+	line-height: rem(15);
+	color: #FFFFFF;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	height: rem(55);
+	padding-left: rem(70);
+	padding-right: rem(35);
+	position: relative;
+	text-align: left;
+	transition: .3s;
+
+	@include tablets() {
+		margin-top: rem(30);
+	}
+
+	i {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(43);
+		height: rem(43);
+		position: absolute;
+		left: rem(7);
+		top: 50%;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		background-color: #fff;
+
+
+		&:before {
+			content: "";
+			display: block;
+			width: rem(15);
+			height: rem(10);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: 50%;
+			background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='7.87864' y1='3' x2='12.6501' y2='7.77148' stroke='%232C4A9D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='1.5' y1='-1.5' x2='8.24789' y2='-1.5' transform='matrix(-0.707107 0.707107 0.707107 0.707107 9.89258 3)' stroke='%232C4A9D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+			margin-bottom: rem(2);
+		}
+	}
+
+	&:hover {
+		background: #1C2541;
+	}
+
+}

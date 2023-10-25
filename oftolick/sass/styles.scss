@@ -1,0 +1,124 @@
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@function lh($lh, $fs) {
+  @return #{$lh/$fs};
+}
+
+
+// down
+$desktop-lg: 1439.98px;
+$desktop: 1199.98px;
+$desktop-sm: 991.98px;
+
+$tablets-lg: 899.98px;
+$tablets: 767.98px;
+$tablets-sm: 599.98px;
+
+$phones-lg: 575.98px;
+$phones: 374.98px;
+$phones-sm: 319.98px;
+
+// up
+$desktop-lg-up: 1440px;
+$desktop-up: 1200px;
+$desktop-sm-up: 992px;
+
+$tablets-lg-up: 900px;
+$tablets-up: 768px;
+$tablets-sm-up: 600px;
+
+$phones-lg-up: 576px;
+$phones-up: 375px;
+$phones-sm-up: 320px;
+
+
+//-------------- media --------------
+@mixin desktop-lg {
+  @media screen and (max-width: $desktop-lg) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media screen and (max-width: $desktop-sm) {
+    @content;
+  }
+}
+
+@mixin tablets-lg {
+  @media screen and (max-width: $tablets-lg) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin tablets-sm {
+  @media screen and (max-width: $tablets-sm) {
+    @content;
+  }
+}
+
+@mixin phones-lg {
+  @media screen and (max-width: $phones-lg) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin phones-sm {
+  @media screen and (max-width: $phones-sm) {
+    @content;
+  }
+}
+
+@mixin custom-max($prop) {
+  @media screen and (max-width: $prop) {
+    @content;
+  }
+}
+
+@mixin custom-min($prop) {
+  @media screen and (min-width: $prop) {
+    @content;
+  }
+}
+
+
+@import "_fonts";
+@import "_reset";
+@import "_common.scss";
+@import "_header.scss";
+@import "_main.scss";
+@import "pages/_home-page.scss";
+@import "pages/_blog.scss";
+@import "pages/_pharmacies.scss";
+@import "pages/_products.scss";
+@import "pages/_exercises.scss";
+@import "pages/_help-eyes.scss";
+@import "pages/_article.scss";
+@import "pages/_vitamins.scss";
+@import "_footer.scss";

@@ -1,0 +1,581 @@
+.exercises-block {
+	margin-bottom: rem(32);
+
+	&__head {
+		padding-right: rem(400);
+		max-width: rem(1100);
+		width: 100%;
+		margin-bottom: rem(40);
+
+		@include desktop-sm() {
+			padding-right: rem(300);
+		}
+
+		@include tablets() {
+			padding-right: 0;
+		}
+
+		h3 {
+			line-height: 111.1%;
+			margin-bottom: rem(60);
+
+			@include desktop-sm() {
+				font-size: rem(36);
+				line-height: rem(45);
+				margin-bottom: rem(33);
+			}
+
+			@include phones-lg() {
+				font-size: rem(30);
+				line-height: 99.9%;
+			}
+		}
+
+		p {
+			font-size: rem(18);
+			line-height: rem(23);
+			color: #0C284E;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__cover {
+		background: #EBF4FF;
+		padding: rem(20) rem(65);
+		position: relative;
+
+		@include tablets() {
+			padding: rem(20) rem(35) rem(90);
+			padding-top: rem(175);
+			margin-top: rem(115);
+		}
+	}
+
+	&__product-img {
+		position: absolute;
+		width: rem(287);
+		right: rem(96);
+		top: rem(-342);
+
+		@include desktop-sm() {
+			right: 0;
+
+		}
+
+		@include tablets() { 
+			right: 50%;
+			transform: translateX(50%);
+			top: rem(-150);
+			width: rem(197);
+		}
+	}
+
+	&__play {
+		display: flex;
+		align-items: center;
+		margin-top: rem(60);
+		margin-bottom: rem(70);
+
+		@include tablets() {
+			margin-top: rem(30);
+			margin-bottom: rem(30);
+			margin-right: rem(-15);
+		}
+
+		i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(34);
+			height: rem(34);
+			background: #C3DBF5;
+			border-radius: 50%;
+			flex-shrink: 0;
+
+			&:after {
+				content: "";
+				display: block;
+				width: rem(8);
+				height: rem(10);
+				background-image: url("data:image/svg+xml,%3Csvg width='8' height='10' viewBox='0 0 8 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 4.13397C8.16667 4.51887 8.16667 5.48113 7.5 5.86603L1.5 9.33013C0.833334 9.71503 -4.47338e-07 9.2339 -4.13689e-07 8.4641L-1.10848e-07 1.5359C-7.71986e-08 0.766098 0.833333 0.284973 1.5 0.669873L7.5 4.13397Z' fill='white'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: 50%;
+				margin-left: rem(3);
+			}
+		}
+
+		span {
+			padding-left: rem(25);
+			font-family: "Futura New";
+			font-style: normal;
+			font-weight: 600;
+			font-size: rem(18);
+			line-height: 105.1%;
+			color: #C3DBF5;
+
+			@include phones-lg() {
+				font-size: rem(14);
+				line-height: 105.1%;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 rem(-40);
+
+		&:last-of-type {
+			border-bottom: none;
+
+			@include desktop-sm() {
+				margin: 0 rem(-15);
+			}
+		}
+	}
+
+	hr {
+		margin: 0;
+		display: block; 
+		margin-bottom: rem(50);
+		width: 100%;
+		border: none;
+		border-bottom: rem(3) solid #F6FAFF;
+
+		@include desktop-sm() {
+			display: none;
+		}
+	}
+
+	&__col {
+		padding: 0 rem(40);
+		width: 33.3333%;
+		margin-bottom: rem(55);
+
+		@include desktop-sm() {
+			padding: 0 rem(15);
+			width: 50%;
+		}
+
+		@include custom-max(680px) {
+			width: 100%;
+			margin-bottom: rem(45);
+		}
+
+	}
+}
+
+.exercises {
+	cursor: pointer;
+
+	&__media-wrap {
+		width: rem(321);
+		height: rem(217);
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.56);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		margin: 0 auto rem(40);
+
+		@include desktop-sm() {
+			width: rem(253);
+			height: rem(171);
+		}
+
+		@include phones-lg() {
+			margin-bottom: rem(15);
+		}
+
+		
+	}
+
+	&__direction-ico {
+		position: absolute;
+		right: rem(60);
+		top: rem(-6);
+		width: rem(45);
+
+		@include desktop-sm() {
+			right: 0;
+			top: 0;
+		}
+	}
+
+
+	p {
+		text-align: center;
+		font-family: "Futura New";
+		font-style: normal;
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: 105.1%;
+		text-align: center;
+		color: #0C284E;
+		width: 100%;
+
+		span {
+			color: #2C4A9D;
+		}
+	}
+}
+
+
+.socials {
+	display: flex;
+	margin: 0 rem(-9);
+
+	li {
+		padding: 0 rem(9);
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(55);
+			height: rem(55);
+			background: #DFEEFF;
+			border: rem(2) solid #DFEEFF;
+			border-radius: 50%;
+			transition: .3s;
+
+			&:hover {
+				border-color: #2C4A9D;
+			}
+
+		}
+	}
+}
+
+.eyes-exercises {
+	position: relative;
+	overflow: hidden;
+	border-radius: 45%;
+
+	.eyes-empty {
+		width: rem(285);
+		position: relative;
+		z-index: 2;
+		pointer-events: none;
+		top: rem(5);
+
+		@include desktop-sm() {
+			width: rem(218);
+		}
+	}
+
+	.pupil {
+		top: 65%;
+		position: absolute;
+		z-index: 1;
+		animation-duration: .75s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-play-state: paused;
+		animation-fill-mode: backwards;
+		width: rem(46);
+	}
+
+	.pupil-l {
+		left: 25%;
+		transform: translate(-50%, -50%);
+	}
+
+	.pupil-r {
+		right: 25%;
+		transform: translate(50%, -50%);
+	}
+
+}
+
+.eyes {
+	width: rem(264);
+	height: rem(105);
+}
+
+
+.exercises:hover {
+	.eyes-exercises {
+		.pupil, .eyes-empty {
+			animation-play-state: running;
+		}
+
+	}
+}
+
+.eyes-exercises-1 {
+	.pupil {
+		top: 69%;
+	}
+	.pupil-l {
+		animation-name: exercises-1-pupil-l;
+
+	}
+
+	.pupil-r {
+		animation-name: exercises-1-pupil-r;
+	}
+}
+
+
+@keyframes exercises-1-pupil-l {
+	from {
+		transform: translate(-120%, -50%);
+	}
+	to {
+		transform: translate(20%, -50%);
+	}
+}
+
+@keyframes exercises-1-pupil-r {
+	from {
+		transform: translate(-20%, -50%);
+	}
+	to {
+		transform: translate(120%, -50%);
+	}
+}
+
+.eyes-exercises-2 {
+	.pupil-l {
+		animation-name: exercises-2-pupil-l;
+
+	}
+
+	.pupil-r {
+		animation-name: exercises-2-pupil-r;
+	}
+}
+
+
+@keyframes exercises-2-pupil-l {
+	from {
+		transform: translate(-50%, -70%);
+	}
+	to {
+		transform: translate(-50%, -10%);
+	}
+}
+
+@keyframes exercises-2-pupil-r {
+	from {
+		transform: translate(50%, -70%);
+	}
+	to {
+		transform: translate(50%, -10%);
+	}
+}
+
+.eyes-exercises-3 {
+	
+
+	.pupil {
+		animation-direction: normal;
+		animation-duration: 1.75s;
+	}
+	.pupil-l {
+		animation-name: exercises-3-pupil-l;
+
+	}
+
+	.pupil-r {
+		// transform: translate(38%, -7%);
+		animation-name: exercises-3-pupil-r;
+	}
+}
+
+
+@keyframes exercises-3-pupil-l {
+	from {
+		transform: translate(-97%, -19%);
+	}
+
+	12.5% {
+		transform: translate(-46%, -6%);
+	}
+
+	25% {
+		transform: translate(5%, -15%);
+	}
+
+	37.5% {
+		transform: translate(38%, -38%);
+	}
+
+	50% {
+		transform: translate(11%, -64%);
+	}
+
+	62.5% {
+		transform: translate(-34%, -76%);
+	}
+
+	75% {
+		transform: translate(-93%, -64%);
+	}
+
+	87.5% {
+		transform: translate(-120%, -40%);
+	}
+
+	to {
+		transform: translate(-97%, -19%);
+	}
+}
+
+@keyframes exercises-3-pupil-r {
+	from {
+		transform: translate(-4%, -13%);
+	}
+
+	12.5% {
+		transform: translate(38%, -7%);
+	}
+
+	25% {
+		transform: translate(90%, -19%)
+	}
+
+	37.5% {
+		transform: translate(120%, -38%);
+	}
+
+	50% {
+		transform: translate(96%, -64%);
+	}
+
+	62.5% {
+		transform: translate(42%, -76%);
+	}
+
+	75% {
+		transform: translate(0%, -68%);
+	}
+
+	87.5% {
+		transform: translate(-29%, -40%);
+	}
+
+	to {
+		transform: translate(-4%, -13%);
+	}
+}
+
+.eyes-exercises-4 {
+	border-radius: 0;
+
+	.eyes-empty {
+		animation-name: exercises-4-eyes;
+		animation-duration: 1s;
+		// animation-timing-function: steps(4);
+		animation-iteration-count: infinite;
+		animation-direction: alternate-reverse;
+		animation-play-state: paused;
+		animation-fill-mode: backwards;
+	}
+}
+
+.eyes-empty {
+	background-image: url("../assets/images/exercises/eyes-empty.svg");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+
+	img {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&:first-child {
+			position: relative;
+		}
+	}
+}
+
+@keyframes exercises-4-eyes {
+	from {
+		background-image: url("../assets/images/exercises/eyes-empty.svg");
+	}
+
+	// 33% {
+	// 	background-image: url("../assets/images/exercises/eyes-empty1k2.svg");
+	// }
+
+	// 66% {
+	// 	background-image: url("../assets/images/exercises/eyes-empty1k3.svg");
+	// }
+
+	to {
+		background-image: url("../assets/images/exercises/eyes-empty1k4.svg");
+	}
+}
+
+
+.eyes-exercises-5 {
+	.pupil-l {
+		animation-name: exercises-5-pupil-l;
+
+	}
+
+	.pupil-r {
+		animation-name: exercises-5-pupil-r;
+	}
+}
+
+
+@keyframes exercises-5-pupil-l {
+	from {
+		transform: translate(16%, -17%);
+	}
+	to {
+		transform: translate(-100%, -61%);
+	}
+}
+
+@keyframes exercises-5-pupil-r {
+	from {
+		transform: translate(105%, -19%);
+	}
+	to {
+		transform: translate(-12%, -63%);
+	}
+}
+
+.eyes-exercises-6 {
+	.pupil-l {
+		animation-name: exercises-6-pupil-l;
+
+	}
+
+	.pupil-r {
+		animation-name: exercises-6-pupil-r;
+	}
+}
+
+
+@keyframes exercises-6-pupil-l {
+	from {
+		transform: translate(27%, -32%);
+	}
+	to {
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes exercises-6-pupil-r {
+	from {
+		transform: translate(-27%, -32%);
+	}
+	to {
+		transform: translate(50%, -50%);
+	}
+}
+
+

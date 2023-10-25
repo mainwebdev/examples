@@ -1,0 +1,162 @@
+.article {
+	background-color: #fff;
+	margin-bottom: rem(100);
+
+	@include phones-lg() {
+		margin: 0 rem(-15) rem(50);
+	}
+
+	h3 {
+		margin-bottom: rem(40);
+
+		@include desktop-sm() {
+			margin-bottom: rem(35);
+		}
+	}
+
+	p {
+		margin-bottom: rem(40);
+		font-size: rem(24);
+		line-height: rem(31);
+		color: #0C284E;
+
+		@include desktop-sm() {
+			font-size: rem(18);
+			line-height: rem(23);
+		}
+	}
+
+	&__hero {
+		@include phones-lg() {
+			position: relative;
+			height: rem(230);
+			overflow: hidden;
+		}
+
+		img {
+			width: 100%;
+
+			@include phones-lg() {
+
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				min-width: 100%;
+				min-height: 100%;
+				height: auto;
+				max-width: none;
+				max-height: 150%;
+			
+			}
+		}
+
+	}
+
+	&__row {
+		display: flex;
+
+		@include desktop-sm() {
+			flex-flow: column;
+		}
+	}
+
+	&__col {
+		width: 100%;
+	}
+
+	&__main-col {
+		max-width: calc(100% - #{rem(470)});
+
+		@include desktop-sm() {
+			max-width: 100%;
+		}
+		
+	}
+
+	&__side-col {
+		max-width: rem(470);
+		background: #F7FAFF;
+		padding: rem(95) rem(48) rem(80);
+
+		@include desktop-sm() {
+			max-width: 100%;
+			background: none;
+			padding: 0 rem(15) rem(60);
+		}
+	}
+
+	&__content-cover {
+		padding: rem(70) rem(60);
+
+		@include desktop-sm() {
+    	padding: rem(25) rem(15);
+		}
+
+	}
+
+	&__head {
+		margin-bottom: rem(60);
+
+		@include desktop-sm() {
+			margin-bottom: rem(45);
+		}
+
+		p {
+			color: #0C284E;
+
+			b {
+				font-weight: 600;
+			}
+		}
+	}
+
+	.liked-article {
+		margin-top: rem(100);
+		margin-bottom: rem(23);
+	}
+
+	.literature-block {
+		margin-bottom: 0;
+	}
+
+	&__articles-widget {
+		margin-bottom: rem(135);
+
+		@include desktop-sm() {
+			margin-bottom: rem(50);
+		}
+	}
+
+	&__product-widget {
+		.article-prev {
+			.products-img-1 {
+				right: 0;
+			}
+		}
+	}
+
+}
+
+.widget-article-prev {
+	max-width: rem(370);
+	display: block;
+	margin-bottom: rem(70);
+	color: #2C4A9D;
+
+
+	img {
+		margin-bottom: rem(33);
+	}
+
+	h4 {
+		font-size: rem(24);
+		margin-bottom: rem(33);
+
+		@include phones-lg() {
+			font-size: rem(22);
+			line-height: 105.1%;
+		}	
+
+	}
+}
